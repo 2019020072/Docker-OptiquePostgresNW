@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* 
 ENV LANG en_US.utf8
 
 RUN mkdir /docker-entrypoint-initdb.d
-ADD postNWcreate.sql  /docker-entrypoint-initdb.d/
+
 
 
 
@@ -53,6 +53,8 @@ RUN mkdir -p /var/run/postgresql && chown -R postgres /var/run/postgresql
 ENV PATH /usr/lib/postgresql/$PG_MAJOR/bin:$PATH
 ENV PGDATA /var/lib/postgresql/data
 VOLUME /var/lib/postgresql/data
+
+ADD northwind.post.sql  /docker-entrypoint-initdb.d/
 
 COPY docker-entrypoint.sh /
 
