@@ -15,7 +15,7 @@ Linux only: [Use docker without sudo](http://askubuntu.com/a/477554)
 
 
   ```bash
-  $ git clone https://github.com/madgik/Docker-OptiquePostgres.git
+  $ git clone https://github.com/vnikolopoulos/Docker-OptiquePostgresNW.git
   ```
 3. Linux only:
 
@@ -25,7 +25,7 @@ Linux only: [Use docker without sudo](http://askubuntu.com/a/477554)
 4. Navigate to the Stream Server Directory:
 
   ```bash
-  $ cd <path to Docker-OptiquePostgres>
+  $ cd <path to Docker-OptiquePostgresNW>
   ```
 4. Windows only
   ```bash
@@ -34,13 +34,13 @@ Linux only: [Use docker without sudo](http://askubuntu.com/a/477554)
 6. Build Stream Server image (this may take a few minutes the first time):
 
   ```bash
-  $ docker build -t postgresserver .
+  $ docker build -t postgresserverNW .
   ```
 
 ## Run Optique Postgres container
 1. Execute:
 ```bash
-$ docker run -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -i -t --rm  --name postgresserver postgresserver
+$ docker run -p 5433:5432 -e POSTGRES_PASSWORD=mysecretpassword -i -t --rm  --name postgresserverNW postgresserverNW
 ```
 2. The "-e POSTGRES_PASSWORD=mysecretpassword" argument is optional.
 3. To change the port the container listens to you need to change the first part of the "-p <chage-this>:5432" argument.
