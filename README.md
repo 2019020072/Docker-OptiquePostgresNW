@@ -28,9 +28,10 @@ Linux only: [Use docker without sudo](http://askubuntu.com/a/477554)
   $ cd <path to Docker-OptiquePostgresNW>
   ```
 4. Windows only
+
   ```bash
   $ dos2unix docker-entrypoint.sh
-  ````
+  ```
 6. Build Stream Server image (this may take a few minutes the first time):
 
   ```bash
